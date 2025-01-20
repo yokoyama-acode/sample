@@ -1,8 +1,13 @@
 // app/layout.tsx
 import './globals.css'; // もし他のグローバルCSSがあれば
 import '../styles/custom.css'; // 作成したCSSファイルをインポート
+import { ReactNode } from 'react';
 
-export default function RootLayout({ children }) {
+interface RootLayoutProps {
+  children: ReactNode;
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="ja">
       <head>
